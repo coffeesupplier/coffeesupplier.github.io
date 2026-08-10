@@ -3,180 +3,450 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Supplier Indonesia — Official B2B Export Secretariat</title>
-    <meta name="description" content="Premier B2B Supplier & Exporter of Grade 1 Indonesian Green Coffee Beans (Gayo, Mandheling, Toraja, Kintamani, Lampung Robusta). EUDR Compliant.">
+    <title>Coffee Supplier Indonesia — Official B2B Green Coffee Export Secretariat</title>
+    <meta name="description" content="Premier B2B Supplier & Exporter of Grade 1 Indonesian Green Coffee Beans (Gayo, Mandheling, Toraja, Kintamani, Lampung Robusta). EUDR Compliant. Direct Trade Secretariat.">
     <link rel="canonical" href="https://www.coffeesupplier.biz.id/">
     <link rel="shortcut icon" href="https://www.coffeesupplier.biz.id/wp-content/themes/coffeesupplier-b2b/assets/favicon.ico">
     <style>
         :root {
             --bg-parchment: #FDFBF7;
+            --bg-secondary: #F4EFE6;
             --bg-card: #FFFFFF;
             --text-main: #1C1917;
             --text-muted: #57534E;
             --brand-green: #2D5A27;
+            --brand-green-hover: #23471f;
             --border-color: #E7E2D8;
+            --wa-green: #25D366;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Georgia, serif;
             background: var(--bg-parchment);
             color: var(--text-main);
-            line-height: 1.6;
-            padding: 0;
-            margin: 0;
+            line-height: 1.75;
+            font-size: 16px;
         }
         header {
             background: var(--brand-green);
             color: #ffffff;
-            padding: 18px 0;
-            text-align: center;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
         }
-        header h1 {
-            font-size: 22px;
+        .header-wrap {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .brand-title {
+            font-family: Georgia, serif;
+            font-size: 20px;
             font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
         }
-        header p {
-            font-size: 12px;
+        .brand-subtitle {
+            font-size: 10px;
             color: #d2f0cb;
-            margin-top: 4px;
+            font-family: monospace;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 13.5px;
+            font-weight: 600;
+        }
+        .header-nav a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .btn-wa-header {
+            background: var(--wa-green);
+            color: #ffffff !important;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 12.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
         .container {
-            max-width: 960px;
+            max-width: 1080px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
         .hero {
-            text-align: center;
-            padding: 40px 20px;
-            background: #F4EFE6;
+            background: var(--bg-secondary);
             border: 1px solid var(--border-color);
-            border-radius: 6px;
-            margin-bottom: 40px;
+            border-radius: 8px;
+            padding: 50px 40px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: center;
         }
         .hero h2 {
-            font-size: 32px;
+            font-family: Georgia, serif;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.25;
             color: var(--text-main);
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
         .hero p {
             font-size: 16px;
             color: var(--text-muted);
-            max-width: 720px;
-            margin: 0 auto 24px;
+            margin-bottom: 24px;
         }
-        .btn-main {
+        .hero-img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        }
+        .badge {
             display: inline-block;
+            background: #e2e7e1;
+            color: var(--brand-green);
+            font-size: 11px;
+            font-weight: 700;
+            font-family: monospace;
+            padding: 4px 10px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        .btn-group {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
             background: var(--brand-green);
             color: #ffffff;
-            font-weight: 700;
-            font-size: 15px;
             padding: 14px 28px;
             border-radius: 4px;
+            font-weight: 700;
+            font-size: 14.5px;
             text-decoration: none;
-            box-shadow: 0 4px 12px rgba(45,90,39,0.2);
-            transition: transform 0.2s, background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
-        .btn-main:hover {
-            background: #23471f;
-            transform: translateY(-2px);
+        .btn-wa {
+            background: var(--wa-green);
+            color: #ffffff;
+            padding: 14px 28px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 14.5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
-        .grid {
+        .section-title {
+            font-family: Georgia, serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .section-desc {
+            font-size: 15px;
+            color: var(--text-muted);
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 40px;
+        }
+        .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 50px;
         }
         .card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            padding: 24px;
             border-radius: 6px;
-            transition: border-color 0.2s;
+            padding: 28px;
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
         .card:hover {
             border-color: var(--brand-green);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.04);
         }
         .card h3 {
-            font-size: 18px;
+            font-size: 20px;
+            font-weight: 700;
             color: var(--brand-green);
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
         .card p {
-            font-size: 13.5px;
+            font-size: 14px;
             color: var(--text-muted);
             margin-bottom: 16px;
+            line-height: 1.7;
         }
         .card a {
             color: var(--brand-green);
             font-weight: 700;
-            font-size: 13px;
+            font-size: 13.5px;
             text-decoration: none;
+        }
+        .table-wrap {
+            overflow-x: auto;
+            margin-bottom: 50px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th, td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        th {
+            background: var(--bg-secondary);
+            font-weight: 700;
+            color: var(--text-main);
+            font-family: monospace;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+        .mono-box {
+            font-family: monospace;
+            font-size: 13px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            border-radius: 6px;
+            line-height: 1.9;
+            margin-bottom: 50px;
         }
         footer {
+            background: #1C1917;
+            color: #D6D3D1;
+            padding: 50px 20px;
             text-align: center;
-            padding: 30px 20px;
-            border-top: 1px solid var(--border-color);
-            font-size: 13px;
-            color: var(--text-muted);
+            font-size: 13.5px;
+            border-top: 1px solid #292524;
         }
         footer a {
-            color: var(--brand-green);
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .sticky-wa {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--wa-green);
+            color: #ffffff;
+            padding: 12px 22px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 13.5px;
             text-decoration: none;
-            font-weight: 600;
+            box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        @media (max-width: 850px) {
+            .hero { grid-template-columns: 1fr; }
+            .header-nav { display: none; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Coffee Supplier Indonesia</h1>
-    <p>Direct B2B Export Secretariat &bull; ASKI Network</p>
+    <div class="header-wrap">
+        <a href="https://www.coffeesupplier.biz.id/" class="brand-title">
+            Coffee Supplier Indonesia
+            <div class="brand-subtitle">Direct Trade Secretariat &bull; ASKI Network</div>
+        </a>
+        <nav class="header-nav">
+            <a href="https://www.coffeesupplier.biz.id/about/">About Us</a>
+            <a href="https://www.coffeesupplier.biz.id/single-origins/">Single Origins</a>
+            <a href="https://www.coffeesupplier.biz.id/eudr-compliance/">EUDR Traceability</a>
+            <a href="https://www.coffeesupplier.biz.id/export-logistics/">Logistics & Ports</a>
+            <a href="https://wa.me/6282318900790?text=Hi%2C%20I%27m%20interested%20in%20sourcing%20Indonesian%20green%20coffee.%20Please%20send%20me%20more%20information." target="_blank" rel="noopener noreferrer" class="btn-wa-header">
+                💬 WhatsApp +62 823-1890-0790
+            </a>
+        </nav>
+    </div>
 </header>
 
 <div class="container">
+
+    <!-- HERO SECTION -->
     <div class="hero">
-        <h2>Grade 1 Indonesian Green Coffee Beans</h2>
-        <p>Connecting 143 smallholder farmer cooperatives across Sumatra, Sulawesi, Bali, and Java directly to international commercial roasteries and green coffee buyers across 70 countries.</p>
-        <a href="https://www.coffeesupplier.biz.id/" class="btn-main">Visit Official Portal (www.coffeesupplier.biz.id) ➔</a>
+        <div>
+            <span class="badge">DIRECT TRADE ORIGIN SECRETARIAT</span>
+            <h2>Connecting 143 Smallholder Co-ops With Global Roasters</h2>
+            <p>Operating under the oversight of the Indonesian Coffee Association (ASKI) National Secretariat in Jakarta, we provide direct export access to Grade 1 Arabica and Fine Robusta green coffee beans across 70 commercial importing nations.</p>
+            <div class="btn-group">
+                <a href="https://www.coffeesupplier.biz.id/" class="btn-primary">Visit Official Portal (coffeesupplier.biz.id) ➔</a>
+                <a href="https://wa.me/6282318900790?text=Hi%2C%20I%27m%20interested%20in%20sourcing%20Indonesian%20green%20coffee.%20Please%20send%20me%20more%20information." target="_blank" rel="noopener noreferrer" class="btn-wa">💬 Chat on WhatsApp (+62 823-1890-0790)</a>
+            </div>
+        </div>
+        <div>
+            <img src="https://www.coffeesupplier.biz.id/wp-content/themes/coffeesupplier-b2b/assets/green_coffee_inspection.webp" alt="Indonesian Green Coffee Beans Inspection" class="hero-img" />
+        </div>
     </div>
 
-    <div class="grid">
+    <!-- SCAA MATRIX TABLE -->
+    <h2 class="section-title">Grade 1 Green Coffee Specifications</h2>
+    <p class="section-desc">Certified SCAA physical defect sorting, digital moisture calibration, and Q-Grader cupping approval prior to vessel shipment.</p>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Origin Variety</th>
+                    <th>Elevation</th>
+                    <th>Processing</th>
+                    <th>Moisture</th>
+                    <th>SCAA Score</th>
+                    <th>Direct Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Sumatra Arabica Gayo Grade 1</strong></td>
+                    <td>1,200 – 1,600m</td>
+                    <td>Wet Hulled / Washed</td>
+                    <td>&lt; 12.5%</td>
+                    <td>84.00 – 86.00</td>
+                    <td><a href="https://www.coffeesupplier.biz.id/single-origins/">Explore Lot ➔</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Sumatra Mandheling Specialty</strong></td>
+                    <td>1,100 – 1,500m</td>
+                    <td>Wet Hulled (Giling Basah)</td>
+                    <td>&lt; 12.5%</td>
+                    <td>85.00 – 87.00</td>
+                    <td><a href="https://www.coffeesupplier.biz.id/single-origins/">Explore Lot ➔</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Sulawesi Toraja Kalosi Washed</strong></td>
+                    <td>1,400 – 1,800m</td>
+                    <td>Full Washed</td>
+                    <td>&lt; 12.0%</td>
+                    <td>85.00 – 87.00</td>
+                    <td><a href="https://www.coffeesupplier.biz.id/single-origins/">Explore Lot ➔</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Bali Kintamani Honey Arabica</strong></td>
+                    <td>1,200 – 1,500m</td>
+                    <td>Honey / Natural</td>
+                    <td>&lt; 12.5%</td>
+                    <td>83.50 – 85.50</td>
+                    <td><a href="https://www.coffeesupplier.biz.id/single-origins/">Explore Lot ➔</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Java Preanger Heritage Washed</strong></td>
+                    <td>1,300 – 1,700m</td>
+                    <td>Full Washed</td>
+                    <td>&lt; 12.0%</td>
+                    <td>84.00 – 86.00</td>
+                    <td><a href="https://www.coffeesupplier.biz.id/single-origins/">Explore Lot ➔</a></td>
+                </tr>
+                <tr>
+                    <td><strong>Lampung Fine Robusta Grade 1</strong></td>
+                    <td>600 – 900m</td>
+                    <td>Dry Natural / Screen 18</td>
+                    <td>&lt; 12.5%</td>
+                    <td>Commercial Grade 1</td>
+                    <td><a href="https://www.coffeesupplier.biz.id/single-origins/">Explore Lot ➔</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- FEATURED CARDS GRID -->
+    <h2 class="section-title">Trade Infrastructure & Compliance Hubs</h2>
+    <p class="section-desc">Comprehensive export logistics, EUDR zero-deforestation certification, and quality laboratory testing.</p>
+
+    <div class="grid-3">
         <div class="card">
-            <h3>Sumatra Gayo & Mandheling</h3>
-            <p>Grade 1 Specialty Arabica (SCAA 84-87). Moisture &lt; 12.5%, GrainPro 60kg jute bags.</p>
-            <a href="https://www.coffeesupplier.biz.id/single-origins/">Explore Single Origins ➔</a>
-        </div>
-        <div class="card">
-            <h3>EUDR Deforestation Compliance</h3>
-            <p>100% verified GPS polygon mapping for Regulation (EU) 2023/1115 customs release.</p>
+            <h3>🌱 EUDR Deforestation Traceability</h3>
+            <p>100% compliant with Regulation (EU) 2023/1115. Every FCL container includes verified GPS polygon farm mapping coordinates and automated Due Diligence Statement (DDS) XML data for European customs entry.</p>
             <a href="https://www.coffeesupplier.biz.id/eudr-compliance/">EUDR Compliance Details ➔</a>
         </div>
         <div class="card">
-            <h3>20ft FCL Export Logistics</h3>
-            <p>Direct shipping from Belawan (IDBLW) and Priok (IDTPP) ports. 19.2 Metric Tons per container.</p>
-            <a href="https://www.coffeesupplier.biz.id/export-logistics/">Logistics & Transit Times ➔</a>
+            <h3>🚢 20ft FCL Container Ocean Freight</h3>
+            <p>Standardized 20ft dry container capacity (320 Jute Bags @ 60kg Net = 19,200 KG / 19.2 MT) with GrainPro hermetic moisture liners shipped from Belawan Port (IDBLW) and Priok Port (IDTPP).</p>
+            <a href="https://www.coffeesupplier.biz.id/export-logistics/">Logistics & Port Schedules ➔</a>
         </div>
         <div class="card">
-            <h3>Quality Control & SCAA Lab</h3>
-            <p>Buhler optical color sorting, density gravity tables, and certified Q-Grader cupping approval.</p>
-            <a href="https://www.coffeesupplier.biz.id/quality-control/">Quality Standards ➔</a>
+            <h3>🔬 Quality Control & SCAA Lab</h3>
+            <p>Buhler optical color sorters, gravity density tables, and certified Q-Grader sensory cupping panel evaluation guaranteeing zero primary defects per 300g sample.</p>
+            <a href="https://www.coffeesupplier.biz.id/quality-control/">Quality Control Protocol ➔</a>
         </div>
         <div class="card">
-            <h3>Certifications & Clearances</h3>
-            <p>Official ICO Certificate of Origin, Phytosanitary health clearance, and USDA/EU Organic lots.</p>
-            <a href="https://www.coffeesupplier.biz.id/certifications/">Trade Certifications ➔</a>
+            <h3>📜 Trade Certifications & Clearances</h3>
+            <p>Includes ICO Certificate of Origin issued by the Ministry of Trade, Ministry of Agriculture Phytosanitary Health Certificate, and Independent Surveyor Quality/Weight Certificate.</p>
+            <a href="https://www.coffeesupplier.biz.id/certifications/">Certification Hub ➔</a>
         </div>
         <div class="card">
-            <h3>250g PSS Sample Dispatch</h3>
-            <p>Pre-shipment sample packs dispatched via DHL Express to your roastery lab within 24 hours.</p>
+            <h3>🏷️ Private Label & Toll Roasting</h3>
+            <p>Custom roast profile development, degassing valve bag packaging (250g, 500g, 1kg), and nitrogen flushing ensuring 12-month shelf freshness for commercial brand distributors.</p>
+            <a href="https://www.coffeesupplier.biz.id/private-label/">Toll Roasting Details ➔</a>
+        </div>
+        <div class="card">
+            <h3>📦 250g DHL Sample Request</h3>
+            <p>Order a 250g Pre-Shipment Sample (PSS) batch dispatched via DHL Express directly to your roastery laboratory within 24 hours for sensory cupping evaluation.</p>
             <a href="https://www.coffeesupplier.biz.id/sample-request/">Request Sample Pack ➔</a>
         </div>
     </div>
+
+    <!-- LOGISTICS SPEC MONO BOX -->
+    <h2 class="section-title">20ft FCL Logistics Specifications</h2>
+    <div class="mono-box">
+        <div>&bull; Container Specification: <strong>20ft FCL Dry Freight Container</strong></div>
+        <div>&bull; Total Container Load: <strong>320 Jute Bags (60 KG Net Each)</strong></div>
+        <div>&bull; Total Net Weight: <strong>19,200 KG (19.2 Metric Tons)</strong></div>
+        <div>&bull; Hermetic Moisture Protection: <strong>Inner GrainPro Moisture Barrier Liners</strong></div>
+        <div>&bull; Transit Days to Port of Hamburg (DEHAM): <strong>24 – 28 Days</strong></div>
+        <div>&bull; Transit Days to Port of Genoa (ITGOA): <strong>22 – 26 Days</strong></div>
+        <div>&bull; Transit Days to Port of Yokohama (JPYOK): <strong>12 – 15 Days</strong></div>
+        <div>&bull; Port of Loading Options: <strong>Belawan (IDBLW - Medan), Tanjung Priok (IDTPP - Jakarta)</strong></div>
+    </div>
+
 </div>
 
+<!-- STICKY WHATSAPP BUTTON -->
+<a href="https://wa.me/6282318900790?text=Hi%2C%20I%27m%20interested%20in%20sourcing%20Indonesian%20green%20coffee.%20Please%20send%20me%20more%20information." target="_blank" rel="noopener noreferrer" class="sticky-wa">
+    💬 Chat on WhatsApp with +62 823-1890-0790
+</a>
+
 <footer>
-    <p>&copy; 2026 Coffee Supplier Indonesia. Official Trade Secretariat Backing. Powered by <a href="https://www.coffeesupplier.biz.id/">coffeesupplier.biz.id</a></p>
+    <p>&copy; 2026 Coffee Supplier Indonesia. Official Direct Trade Secretariat Backing. ASKI Network.</p>
+    <p style="margin-top: 8px;">Main Export Portal: <a href="https://www.coffeesupplier.biz.id/">https://www.coffeesupplier.biz.id/</a> &bull; Direct Email: export@coffeesupplier.biz.id</p>
 </footer>
 
 </body>
